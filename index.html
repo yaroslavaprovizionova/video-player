@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video player</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/e49e352de2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="video-block">
+    <div class="container">
+      <div class="progress-wr">
+        <video  id="video-player">
+          <source src="Interstellar.mp4" type="video/mp4">
+        </video>
+        <progress class="bar-container" id="progress" max="100" value="0"></progress>
+        <div id="out">
+          <p  id="timer">00:00</p>
+          <p> / </p>
+          <p  id="left-timer">00:00</p>
+        </div>
+        
+
+      </div>
+    
+      <div class="panel">
+
+        <div class="panel__left">
+          <div class="circle-hover1" data-text="PLAY" ><i class="fas fa-play" id="play" ></i></div>
+          <div class="circle-hover1" data-text="PAUSE"><i class="fas fa-pause" id="pause"></i></div>
+          <div class="circle-hover1" data-text="STOP"><i class="fas fa-stop" id="stop"></i></div>
+          <div class="diliver"></div>
+
+          <div class="panel__center">
+            <div class="circle-hover" data-speed="-10 SEC"><i class="fas fa-chevron-left" id="sec-down"></i></i></div>
+            <div class="circle-hover" data-speed="SPEED-DOWN"><i class="fas fa-angle-double-left" id="speed-down"></i></div>
+            <div class="circle-hover" data-speed="SPEED-NORMAL"><i class="fas fa-chevron-circle-right" id="speed-normal"></i></div>
+            <div class="circle-hover" data-speed="SPEED-UP"><i class="fas fa-angle-double-right" id="speed-up"></i></div>
+            <div class="circle-hover" data-speed="+10 SEC"><i class="fas fa-chevron-right" id="sec-up"></i></div>
+            <div class="diliver"></div>
+    
+          </div>
+        </div>
+
+        <div class="panel__right ">
+          <div class="circle-hover" data-speed="VOLUME MUTED" id="volume-muted"><i class="fas fa-volume-up" id="volmute"></i></div>
+          <div><input type="range" id="volume" min=0 max=100></div>
+          <div class="circle-hover1" data-text="FULL"><i class="fas fa-expand" id="full-screen"></i></div>
+        </div>
+      </div>
+
+    </div>
+  </div>  
+  <script src="script.js"></script>
+</body>
+</html>
